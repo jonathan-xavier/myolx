@@ -1,19 +1,14 @@
 package com.jhon.myolx;
 
-import java.util.Arrays;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.jhon.myolx.domain.Categoria;
-import com.jhon.myolx.domain.Produto;
 import com.jhon.myolx.repositories.CategoriaRepository;
 import com.jhon.myolx.repositories.ProdutoRepository;
 
 @SpringBootApplication
-public class MyolxApplication implements CommandLineRunner{
+public class MyolxApplication{
 	
 	@Autowired
 	private CategoriaRepository repository;
@@ -25,8 +20,8 @@ public class MyolxApplication implements CommandLineRunner{
 		SpringApplication.run(MyolxApplication.class, args);
 	}
 
-	@Override
-	public void run(String... args) throws Exception {
+	
+	/*public void run(String... args) throws Exception {
 		Categoria cat1 = new Categoria(null, "informatica");
 		Categoria cat2 = new Categoria(null, "Escritório");
 		
@@ -47,6 +42,6 @@ public class MyolxApplication implements CommandLineRunner{
 		produtoRepository.saveAll(Arrays.asList(p1,p2,p3));
 		
 		
-	}
+	}*/
 
 }
